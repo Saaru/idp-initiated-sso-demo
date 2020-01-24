@@ -1,0 +1,29 @@
+<html>
+<head>
+    <title>xAmplify</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <div class="container animated zoomInDown slow">
+    <div class="jumbotron">
+        <h1>Welcome to xAmplify</h1>
+    </div>
+    <h3><b>LoggedIn User Details</b></h3>
+<table class="table">
+    <tbody>
+        <% Object.keys(user).forEach(function(key){ %>
+            <tr>
+                <th><%= key %></th>
+                <td><%= user[key] %></td>
+            </tr>
+        <%  });%>
+    </tbody>
+  </table>
+</div>
+</body>
+</html>
