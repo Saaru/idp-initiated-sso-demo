@@ -20,7 +20,7 @@ passport.deserializeUser(function(user, done) {
 const reader = new MetadataReader(fs.readFileSync(path.join(__dirname, './allbound_metadata.xml'), 'utf8'));
 const config = toPassportConfig(reader);
 
-fs.writeFile(path.join(__dirname + '/idp_cert.pem'), config.cert, function(err) {
+fs.writeFile(path.join(__dirname, '/idp_cert.pem'), config.cert, function(err) {
   if(err) {
       return console.log(err);
   }
