@@ -32,7 +32,6 @@ var samlStrategy = new saml.Strategy({
   callbackUrl: "http://localhost:9090/login/callback",
   // URL that goes from the Service Provider -> Identity Provider
   entryPoint: config.entryPoint,
-  // Usually specified as `/shibboleth` from site root
   issuer: config.identityProviderUrl,
   identifierFormat: null,
   // Identity Provider's public key
